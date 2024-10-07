@@ -1,20 +1,20 @@
+let variable:any
 
-// tipe data string
-let nama:string = "Ranggo"
+variable = "ranggo"
+variable = 25
+variable = true
 
-// tipe data number
-let age:number = 25
+function logValue(value:any){
+    console.log(value)
+}
 
-// tipe data boolean
-let isMarried:boolean = true
+function anyRisk(value:any){
+    console.log(value.toFixed(2))
+}
 
-// tipe data array
-let numbers:number[] = [1,2,3,4,5]
+anyRisk("ranggo")
 
-let hobbies:string[] = ['basket', 'catur', 'ikut pengajian']
+logValue("ini data dari api")
+logValue(34890067)
 
-// tipe data tupple
-let person:[string,number,number] = ['ranggo',25, 43]
-
-
-console.log(nama, age, isMarried, numbers, hobbies)
+console.log(variable)

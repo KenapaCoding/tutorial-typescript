@@ -1,13 +1,15 @@
 "use strict";
-// tipe data string
-let nama = "Ranggo";
-// tipe data number
-let age = 25;
-// tipe data boolean
-let isMarried = true;
-// tipe data array
-let numbers = [1, 2, 3, 4, 5];
-let hobbies = ['basket', 'catur', 'ikut pengajian'];
-// tipe data tupple
-let person = ['ranggo', 25, 43];
-console.log(nama, age, isMarried, numbers, hobbies);
+let variable;
+variable = "ranggo";
+variable = 25;
+variable = true;
+function logValue(value) {
+    console.log(value);
+}
+function anyRisk(value) {
+    console.log(value.toFixed(2));
+}
+anyRisk("ranggo");
+logValue("ini data dari api");
+logValue(34890067);
+console.log(variable);
