@@ -1,20 +1,13 @@
-let variable:any
+// union types
 
-variable = "ranggo"
-variable = 25
-variable = true
+let id : number | string | boolean;
+id = 123
+id = true
 
-function logValue(value:any){
-    console.log(value)
-}
+let arr:(string|number)[] = [1,2,3,4,'ok']
 
-function anyRisk(value:any){
-    console.log(value.toFixed(2))
-}
+// literal types
+let info : "succees" |true
+info = true
 
-anyRisk("ranggo")
-
-logValue("ini data dari api")
-logValue(34890067)
-
-console.log(variable)
+console.log(info)
