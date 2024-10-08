@@ -1,9 +1,9 @@
 "use strict";
-// enum DirectionString {
-//     Up = 'Atas', // 0
-//     Down = 'Bawah', // 1
-//     Left = 'Kiri', // 2
-//     Right = 'Kanan' // 3
-// }
-let move = 6 /* Direction.Up */;
-console.log(move);
+let data;
+data = 24;
+if (typeof data === 'string') {
+    console.log(data.toUpperCase());
+}
+else {
+    console.log("data is not a string");
+}
