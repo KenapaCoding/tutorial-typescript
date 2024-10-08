@@ -1,16 +1,9 @@
 "use strict";
-let userID;
-let postID;
-userID = 123;
-console.log(userID);
-const user1 = {
-    id: 1,
-    name: 'Ranggo',
-    online: true
+let user1 = {
+    name: 'Ranggo'
 };
-const user2 = {
-    id: 2,
-    name: 'Pato',
-    online: false
+let user2 = {
+    name: 'Udin',
+    age: 25
 };
-console.log(user1);
+console.log(user2);

@@ -1,29 +1,16 @@
-// type aliases
-type ID = string|number
-
-let userID:ID;
-let postID:ID;
-
-userID = 123
-
-console.log(userID)
-
 type User = {
-    id:number,
-    name:string,
-    online:boolean
+    name: string,
+    age?: number,
+    email?: string
 }
 
-const user1:User = {
-    id: 1,
-    name: 'Ranggo',
-    online: true
+let user1:User = {
+    name: 'Ranggo'
 }
 
-const user2:User = {
-    id:2,
-    name:'Pato',
-    online: false
+let user2:User = {
+    name: 'Udin',
+    age: 25
 }
 
-console.log(user1)
+console.log(user2)
