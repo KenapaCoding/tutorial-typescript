@@ -1,16 +1,16 @@
-type User = {
-    name: string,
-    age?: number,
-    email?: string
+const enum Direction {
+    Up = 6, // 0
+    Down, // 1
+    Left, // 2
+    Right // 3
 }
+// enum DirectionString {
+//     Up = 'Atas', // 0
+//     Down = 'Bawah', // 1
+//     Left = 'Kiri', // 2
+//     Right = 'Kanan' // 3
+// }
 
-let user1:User = {
-    name: 'Ranggo'
-}
+let move:Direction = Direction.Up
 
-let user2:User = {
-    name: 'Udin',
-    age: 25
-}
-
-console.log(user2)
+console.log(move)
