@@ -1,13 +1,29 @@
-// union types
+// type aliases
+type ID = string|number
 
-let id : number | string | boolean;
-id = 123
-id = true
+let userID:ID;
+let postID:ID;
 
-let arr:(string|number)[] = [1,2,3,4,'ok']
+userID = 123
 
-// literal types
-let info : "succees" |true
-info = true
+console.log(userID)
 
-console.log(info)
+type User = {
+    id:number,
+    name:string,
+    online:boolean
+}
+
+const user1:User = {
+    id: 1,
+    name: 'Ranggo',
+    online: true
+}
+
+const user2:User = {
+    id:2,
+    name:'Pato',
+    online: false
+}
+
+console.log(user1)
