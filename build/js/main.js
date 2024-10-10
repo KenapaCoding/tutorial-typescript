@@ -1,17 +1,6 @@
 "use strict";
-// function greet(name : string = "Guest", age?:number):string{
-//     if(age){
-//         return `Hello ${name}, your age ${age} years old.`
-//     }
-//     return `Hello ${name}`
-// } 
-// console.log(greet("Ranggo"))
-// console.log(greet(undefined, 26))
-// void 
-function logMessage(message) {
-    console.log(message);
-}
-// never
-function throwError(message) {
-    throw new Error(message);
-}
+// function multiply(a:number, b:number):number {
+//     return a * b
+// }
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4));

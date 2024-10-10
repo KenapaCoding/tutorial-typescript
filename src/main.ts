@@ -1,20 +1,9 @@
-// function greet(name : string = "Guest", age?:number):string{
+// function multiply(a:number, b:number):number {
+//     return a * b
+// }
 
-//     if(age){
-//         return `Hello ${name}, your age ${age} years old.`
-//     }
-//     return `Hello ${name}`
-// } 
+const multiply = (a:number,b:number):number =>  a*b
 
-// console.log(greet("Ranggo"))
-// console.log(greet(undefined, 26))
 
-// void 
-function logMessage(message:string):void {
-    console.log(message)
-}
 
-// never
-function throwError(message:string):never{
-    throw new Error(message)
-}
+console.log(multiply(3,4))
