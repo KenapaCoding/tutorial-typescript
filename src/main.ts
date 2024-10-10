@@ -1,7 +1,20 @@
-let someValue:unknown = "Hello TypeScript !"
+// function greet(name : string = "Guest", age?:number):string{
 
-// console.log((someValue as string).length)
+//     if(age){
+//         return `Hello ${name}, your age ${age} years old.`
+//     }
+//     return `Hello ${name}`
+// } 
 
-let imgElement = document.getElementById("myImg") as HTMLImageElement
+// console.log(greet("Ranggo"))
+// console.log(greet(undefined, 26))
 
-imgElement.src = "https://images.unsplash.com/photo-1721333088875-e9e3cc2c547a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+// void 
+function logMessage(message:string):void {
+    console.log(message)
+}
+
+// never
+function throwError(message:string):never{
+    throw new Error(message)
+}
