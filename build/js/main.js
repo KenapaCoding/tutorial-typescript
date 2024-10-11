@@ -1,6 +1,10 @@
 "use strict";
 class Product {
+    // public name:string; //data
+    // public price:number; //data
     constructor(name, price) {
+        this.name = name;
+        this.price = price;
         this.name = name;
         this.price = price;
     }

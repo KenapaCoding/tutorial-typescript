@@ -1,8 +1,8 @@
 class Product{
-    public name:string; //data
-    public price:number; //data
+    // public name:string; //data
+    // public price:number; //data
 
-    constructor(name:string, price:number){
+    constructor(public name:string, public price:number){
         this.name = name
         this.price = price
     }
