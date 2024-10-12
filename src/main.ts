@@ -1,23 +1,12 @@
-class Animal{
-    makeSound(){
-        console.log("Some generic animal sound")
+class Calculator {
+    static pi:number = 3.14
+
+    static calculateArea(radius:number):number{
+        return Calculator.pi * radius * radius
     }
 }
 
-class Dog extends Animal{
-    makeSound(): void {
-        console.log('Woof woof !')
-    }
-}
+const calc = new Calculator()
 
-class Cat extends Animal{
-    makeSound(): void {
-        console.log('Miaw miaw !')
-    }
-}
 
-const Pitbull = new Dog()
-const kucing = new Cat()
-
-Pitbull.makeSound()
-kucing.makeSound()
+console.log(Calculator.calculateArea(5))
