@@ -1,12 +1,26 @@
-class Calculator {
-    static pi:number = 3.14
-
-    static calculateArea(radius:number):number{
-        return Calculator.pi * radius * radius
+class Person{
+    constructor(private _age:number){
+        this._age = _age
     }
+
+    get age():string {
+        return `${this._age} years old`
+    }
+
+    set age(newAge:number) {
+        if(newAge > 0){
+            this._age = newAge
+        } else {
+            console.log('Invalid Age')
+        }
+    }
+
 }
 
-const calc = new Calculator()
+const person1 = new Person(20)
 
+// console.log(person1._age)
+console.log(person1.age)
 
-console.log(Calculator.calculateArea(5))
+person1.age = -3
+console.log(person1.age)
