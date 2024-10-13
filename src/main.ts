@@ -1,50 +1,99 @@
-// function identity<T,U>(value:T):T{
-//     return value
+// partial
+
+// interface User{
+//     id:number,
+//     name:string,
+//     email:string
 // }
 
-// console.log(identity<string, string>("Hello There !"))
-// console.log(identity<number, string>(1290))
-
-// console.log(identity("hello world"))
-
-// class Box<T> {
-    
-//     constructor(public content:T) {
-//         this.content = content
-//     }
-
-//     getContent():T {
-//         return this.content
-//     }
+// function updateUser(user:Partial<User>){
+//     console.log(user)
 // }
 
-// let numberBox = new Box<number>(123)
-// let stringBox = new Box<string>("I love Rendang")
-// console.log(numberBox.getContent())
-// console.log(stringBox.getContent())
+// updateUser({name:"John"})
 
-// interface User<T,U>{
-//     name: T,
-//     age: U
-// }
+// Required
 
-// const user1:User<string,number> = {
-//     name: "Budiman",
-//     age: 42
-// }
-
-// function logLength<T extends {length:number}>(item:T):void {
-//     console.log(item.length)
-// }
-
-// logLength<string>("Hello")
-
-// logLength([1,2,3,4])
-
-// logLength<number>(123) error
-
-function logMessage<T = string>(message:T):void {
-    console.log(message)
+interface User{
+    id?:number,
+    name?:string,
+    email?:string
 }
 
-logMessage(90)
+const user1:Required<User> = {
+    id:1,
+    name:"John",
+    email:"john@gmail.com"
+}
+
+// Readonly
+
+const user2:Readonly<User> = {
+    id:2,
+    name:"Jane",
+    email:"jane@gmail.com"
+}
+// console.log(user2.name)
+// user2.name = "Jane n june"
+// console.log(user2.name)
+
+// Pick
+
+type UserInfo = Pick<User, 'id' | 'name'>
+
+const userInfo1:UserInfo = {
+    id: 4,
+    name: 'Udin'
+}
+
+// Omit
+
+type UserWithoutEmail = Omit<User, 'email'> 
+
+const user5:UserWithoutEmail = {
+    id: 5,
+    name:"susanti"
+}
+
+// Record
+
+type UserRoles = 'admin' | 'user' | 'guest'
+
+const users:Record<UserRoles, string[]> = {
+    admin: ['alice','bob'],
+    user: ['charlie'],
+    guest: ['john']
+}
+
+// extract
+
+// type StringOrNumber = string | number
+// type OnlyString = Extract<StringOrNumber, string>
+
+
+// exclude
+
+type StringOrNumber = string | number
+type OnlyNumber = Exclude<StringOrNumber, string>
+
+// NonNullable
+type NullableString = string | null | undefined
+
+type NonNullableString = NonNullable<NullableString>
+
+// ReturnType
+
+function getUser(){
+    return {id:1, name:"alice"}
+}
+
+type UserReturnType = ReturnType<typeof getUser>
+
+// InstanceType
+class Person{
+    constructor(public name:string){
+        this.name = name
+    }
+}
+
+type PersonInstance = InstanceType<typeof Person>
