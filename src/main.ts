@@ -1,58 +1,50 @@
-interface User {
-    name: string,
-    age: number,
-    isAdmin?: boolean,
-    greet():string
+// function identity<T,U>(value:T):T{
+//     return value
+// }
+
+// console.log(identity<string, string>("Hello There !"))
+// console.log(identity<number, string>(1290))
+
+// console.log(identity("hello world"))
+
+// class Box<T> {
+    
+//     constructor(public content:T) {
+//         this.content = content
+//     }
+
+//     getContent():T {
+//         return this.content
+//     }
+// }
+
+// let numberBox = new Box<number>(123)
+// let stringBox = new Box<string>("I love Rendang")
+// console.log(numberBox.getContent())
+// console.log(stringBox.getContent())
+
+// interface User<T,U>{
+//     name: T,
+//     age: U
+// }
+
+// const user1:User<string,number> = {
+//     name: "Budiman",
+//     age: 42
+// }
+
+// function logLength<T extends {length:number}>(item:T):void {
+//     console.log(item.length)
+// }
+
+// logLength<string>("Hello")
+
+// logLength([1,2,3,4])
+
+// logLength<number>(123) error
+
+function logMessage<T = string>(message:T):void {
+    console.log(message)
 }
 
-interface User {
-    status?:boolean
-}
-
-const user1:User = {
-    name: "John Doe",
-    age: 22,
-    // isAdmin: true
-    greet() {
-        return "Hello There"
-    },
-}
-
-
-// console.log(user1)
-// console.log(user1.greet())
-
-interface Person{
-    name: string,
-    age: number
-}
-
-interface Employee extends Person {
-    employeeId : number
-}
-
-const employee1:Employee = {
-    name : 'John Doe',
-    age : 32,
-    employeeId : 100098
-}
-
-// index signature
-
-interface StudentScoreByName {
-    [key:string] : number
-}
-
-const studentScore:StudentScoreByName = {
-    budi : 90,
-    yanto : 78
-}
-
-interface Add {
-    (a:number, b:number):number
-}
-
-const add:Add = (a,b) =>  a + b
-
-console.log(add(2,7))
-
+logMessage(90)
